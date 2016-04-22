@@ -46,7 +46,7 @@ def orly():
         Bad Request, Try Again
         """
 
-        return message, 401
+        return message, 400
 
     try:
         token = request.form["token"]
@@ -121,7 +121,7 @@ def generate():
         Bad Request, Try Again
         """
 
-        return message, 401
+        return message, 400
 
     try:
         print 'generate image'
@@ -144,7 +144,7 @@ def generate():
             else:
                 guide_text_placement = 'bottom_right'
         else:
-            return "Failed: Invalid Params", 401
+            return "Failed: Invalid Params", 400
 
     except Exception as e:
         print "Unexpected error:", e.message
